@@ -37,6 +37,15 @@ Sample Output 0
 */
 
 function jumpingOnClouds(c) {
-
-
+  let jumps = 0;
+  let pointer = 0;
+  while(pointer < c.length) {
+    if(c[pointer + 2] === 0) {
+      pointer += 2;
+    } else {
+      pointer += 1;
+    }
+    jumps++;
+  }
+  return jumps - 1;
 }
